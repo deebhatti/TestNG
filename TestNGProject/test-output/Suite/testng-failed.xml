@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="IE"/>
+  <test name="FirefoxTest">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="Demo.NewtoursMultipleCheck"/>
+    </classes>
+  </test> <!-- FirefoxTest -->
+  <test name="ChromeTest">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="Demo.NewtoursMultipleCheck"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+  <test name="IETest">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="Demo.NewtoursMultipleCheck"/>
+    </classes>
+  </test> <!-- IETest -->
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="Demo.NewtoursMultipleCheck">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="verifyRegisterTitle"/>
+          <include name="returnToHomePage"/>
+          <include name="returnToHomePage"/>
+          <include name="returnToHomePage"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="openBrowser"/>
+          <include name="openBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- Demo.NewtoursMultipleCheck -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
