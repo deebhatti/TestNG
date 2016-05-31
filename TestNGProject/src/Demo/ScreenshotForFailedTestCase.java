@@ -23,6 +23,8 @@ public class ScreenshotForFailedTestCase {
 		driver.get("http://www.newtours.demoaut.com");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
+	
+	//Add a comment to see in Github
 
 	@Test
 	public void verifyTitle() throws IOException {
